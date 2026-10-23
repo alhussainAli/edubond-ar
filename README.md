@@ -39,3 +39,14 @@
 AR.js: https://ar-js-org.github.io/AR.js-Docs/marker-based/
 A-Frame: https://aframe.io/
 إصدارات التحميل: A-Frame 1.6.0 وAR.js 3.4.7.
+
+
+---
+
+## بطاقات إديوبوند الحيّة (مجلد cards)
+
+نموذج واقع معزز منفصل: وجّه كاميرا الجوال إلى بطاقات العدّ (٩ سيارات، ٤ حافلات، ٥ سيارات أجرة) فتظهر سيارة إديوبوند ثلاثية الأبعاد وتطرح أسئلة حسب مستويات بلوم. مع الإجابة الصحيحة تتقدم وتقفز، ومع الخاطئة ترجع للخلف.
+
+- الرابط: https://alhussainali.github.io/edubond-ar/cards/
+- صور البطاقات للطباعة أو العرض: cards/card-cars.jpg و cards/card-buses.jpg و cards/card-taxis.jpg
+- targets.mind: بصمات البطاقات الثلاث (MindAR). لإضافة بطاقة جديدة يجب إعادة توليده وإضافة أسئلتها في قائمة CARDS داخل cards/index.html.
