@@ -1,0 +1,154 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<title>مشاهد إديوبوند ثلاثية الأبعاد</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zain:wght@400;700;800&family=Tajawal:wght@500;700&display=swap">
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+/* Layout: one stage (the 3D model) with scene tabs above and motion controls below; parts list folds away. */
+:root{
+  --bg:#F3EFF7; --surface:#FFFFFF; --ink:#2A1F33; --muted:#6E6179; --line:#E3DAEA;
+  --purple:#7B3E98; --purple-deep:#5A2A72; --yellow:#FFCA3A; --teal:#26B6A8; --wrong:#D9534F;
+  --stage:#E6E9F3;
+  --font:"Zain","Tajawal",system-ui,sans-serif; --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#17121C; --surface:#221B29; --ink:#F1EAF6; --muted:#B3A5BF; --line:#382D42;
+  --purple:#B57BD4; --purple-deep:#8E55AE; --stage:#2A2333; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#17121C; --surface:#221B29; --ink:#F1EAF6; --muted:#B3A5BF; --line:#382D42;
+  --purple:#B57BD4; --purple-deep:#8E55AE; --stage:#2A2333; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55}
+.wrap{max-width:920px;margin:0 auto;padding-block:20px 36px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;flex-direction:column;gap:14px}
+header h1{margin:0;font-size:1.9rem;line-height:1.2;font-weight:800;color:var(--purple);text-wrap:balance}
+header p{margin:4px 0 0;color:var(--muted);max-width:62ch}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.tab{flex:none;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;
+  padding:7px 16px;font:inherit;font-weight:700;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--purple);border-color:var(--purple);color:#fff}
+.tab:focus-visible,.act:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+.stage{position:relative;background:var(--stage);border-radius:22px;overflow:hidden}
+model-viewer{width:100%;height:min(62vh,520px);min-height:340px;--poster-color:transparent;background:transparent}
+.hint{position:absolute;top:12px;inset-inline-start:12px;background:var(--surface);color:var(--muted);
+  border-radius:12px;padding:5px 12px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.08);pointer-events:none}
+.badge{position:absolute;bottom:12px;inset-inline-start:12px;background:var(--surface);border-radius:12px;padding:4px 12px;
+  font-weight:700;font-size:.95rem;display:flex;gap:6px;align-items:center}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--teal)}
+.dot.c{background:var(--yellow)} .dot.w{background:var(--wrong)}
+.controls{display:flex;flex-wrap:wrap;gap:10px}
+.act{flex:1 1 150px;border:0;border-radius:16px;padding:12px 10px;font:inherit;font-size:1.1rem;font-weight:800;cursor:pointer;
+  background:var(--surface);color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
+.act.correct{background:var(--teal);color:#fff;box-shadow:none}
+.act.wrong{background:var(--wrong);color:#fff;box-shadow:none}
+.act:disabled{opacity:.4;cursor:not-allowed}
+.desc{margin:0;color:var(--muted)}
+.arbtn{position:absolute;bottom:12px;inset-inline-end:12px;border:0;border-radius:999px;background:var(--purple);color:#fff;font:inherit;font-weight:800;padding:8px 16px;cursor:pointer}
+details{background:var(--surface);border-radius:16px;padding:12px 16px;border:1px solid var(--line)}
+summary{cursor:pointer;font-weight:700}
+.parts{margin:10px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.parts code{font-family:var(--mono);font-size:.82rem;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:2px 8px;direction:ltr;display:inline-block}
+.clips{font-family:var(--mono);font-size:.85rem;direction:ltr;unicode-bidi:isolate}
+@media (prefers-reduced-motion:reduce){model-viewer{--progress-bar-height:0}}
+</style>
+</head><body>
+
+
+<div class="wrap">
+  <header>
+    <h1>مشاهد إديوبوند ثلاثية الأبعاد</h1>
+    <p>ثلاثة مشاهد جديدة بنفس أسلوب النظام الشمسي. كل مشهد يتحرك وحده، وفيه حركتان لردّ الفعل يشغّلهما التطبيق عند إجابة الطفل. على الجوال اضغط «اعرضه في غرفتك» لتضع المشهد على الطاولة.</p>
+  </header>
+
+  <div class="tabs" role="tablist" id="tabs"></div>
+
+  <div class="stage">
+    <model-viewer id="mv" camera-controls touch-action="pan-y" autoplay shadow-intensity="0.8" exposure="1.05"
+      camera-orbit="35deg 62deg auto" interaction-prompt="none" alt="مشهد ثلاثي الأبعاد"
+      ar ar-modes="webxr scene-viewer quick-look" ar-scale="auto">
+      <button slot="ar-button" class="arbtn" type="button">اعرضه في غرفتك</button>
+    </model-viewer>
+    <div class="hint">اسحب بإصبع لتدوير المشهد، وقرّب بإصبعين للتكبير</div>
+    <div class="badge"><span class="dot" id="dot"></span><span id="now">حركة مستمرة</span></div>
+  </div>
+
+  <div class="controls">
+    <button class="act" id="bLoop" type="button">الحركة المستمرة</button>
+    <button class="act correct" id="bCorrect" type="button">إجابة صحيحة</button>
+    <button class="act wrong" id="bWrong" type="button">إجابة خاطئة</button>
+  </div>
+  <p class="desc" id="desc"></p>
+
+  <details>
+    <summary>للمبرمج: أسماء الحركات والأجزاء في هذا الملف</summary>
+    <p style="margin:8px 0 0">الحركات: <span class="clips" id="clips"></span></p>
+    <ul class="parts" id="parts"></ul>
+  </details>
+</div>
+
+<script>
+const SCENES = [
+  { id: "transport", label: "مدينة المواصلات", src: "models/EduBond-transport-town.glb",
+    desc: "سيارة إديوبوند والحافلة والتاكسي تدور حول المدرسة، والإشارة تتبدّل. مع الإجابة الصحيحة تقفز السيارة وتدور، ومع الخاطئة ترجع للخلف.",
+    parts: ["EduBond car", "Bus", "Taxi", "EduBond car drive", "School", "Flag", "Traffic light", "Red lamp", "Green lamp", "Tree 1…7", "House 1…3"] },
+  { id: "water", label: "دورة الماء", src: "models/EduBond-water-cycle.glb",
+    desc: "الشمس تسخّن البحر، فيصعد البخار ويتجمع في السحابة، ثم ينزل المطر على الجبل ويعود النهر إلى البحر.",
+    parts: ["Sun", "Sea", "Vapour 1…7", "Cloud", "Rain drop 1…10", "Mountain", "River", "River flow 1…6"] },
+  { id: "plant", label: "دورة حياة النبات", src: "models/EduBond-plant-life-cycle.glb",
+    desc: "بذرة تُسقى، ثم تنبت ساقًا وأوراقًا وزهرة، ثم تعود بذرة من جديد. والنحلة تطير حول الزهرة.",
+    parts: ["Seed", "Plant", "Stem", "Leaf 1…3", "Flower", "Petals", "Watering can", "Bee", "Sun"] },
+];
+const mv = document.getElementById("mv");
+const $ = id => document.getElementById(id);
+let current = null;
+
+function setNow(name) {
+  const map = { Loop: ["حركة مستمرة", ""], Correct: ["إجابة صحيحة", "c"], Wrong: ["إجابة خاطئة", "w"] };
+  const [t, cls] = map[name] || ["حركة مستمرة", ""];
+  $("now").textContent = t; $("dot").className = "dot " + cls;
+}
+function play(name) {
+  const list = mv.availableAnimations || [];
+  if (!list.length) return;
+  const clip = list.includes(name) ? name : list[0];
+  mv.animationName = clip;
+  mv.currentTime = 0;
+  if (clip === "Correct" || clip === "Wrong") mv.play({ repetitions: 1 }); else mv.play();
+  setNow(clip === list[0] && !list.includes(name) ? "Loop" : clip);
+}
+mv.addEventListener("finished", () => play("Loop"));
+mv.addEventListener("load", () => {
+  const list = mv.availableAnimations || [];
+  $("clips").textContent = list.join(" · ");
+  $("bCorrect").disabled = !list.includes("Correct");
+  $("bWrong").disabled = !list.includes("Wrong");
+  play("Loop");
+});
+$("bLoop").onclick = () => play("Loop");
+$("bCorrect").onclick = () => play("Correct");
+$("bWrong").onclick = () => play("Wrong");
+
+function select(s, focus) {
+  current = s;
+  document.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", b.dataset.id === s.id));
+  mv.src = s.src;
+  $("desc").textContent = s.desc;
+  $("parts").innerHTML = "";
+  s.parts.forEach(p => { const li = document.createElement("li"); const c = document.createElement("code"); c.textContent = p; li.appendChild(c); $("parts").appendChild(li); });
+  setNow("Loop");
+}
+SCENES.forEach(s => {
+  const b = document.createElement("button");
+  b.className = "tab"; b.type = "button"; b.role = "tab"; b.dataset.id = s.id; b.textContent = s.label;
+  b.onclick = () => select(s);
+  $("tabs").appendChild(b);
+});
+const fromHash = SCENES.find(s => s.id === location.hash.slice(1));
+select(fromHash || SCENES[0]);
+</script>
+
+</body></html>
